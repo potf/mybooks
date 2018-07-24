@@ -28,7 +28,7 @@ public class Book {
 
     @ManyToMany
     @JoinTable(
-            name = "book_authors",
+            name = "book_author",
             joinColumns = {@JoinColumn(name = "book_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "author_id", referencedColumnName = "id")})
     List<Author> authors = new ArrayList<Author>();

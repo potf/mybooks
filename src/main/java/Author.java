@@ -1,10 +1,9 @@
-import javax.annotation.Generated;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "author")
+@Table(name = "authors")
 public class Author {
 
     @Id
@@ -24,6 +23,7 @@ public class Author {
 
     @ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL)
     List<Book> books = new ArrayList<Book>();
+
 
     public void addBook(Book book){
         if (!books.contains(books))

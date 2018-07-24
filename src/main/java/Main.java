@@ -8,16 +8,30 @@ public class Main {
     static EntityManager em;
 
     public static void main(String[] args) {
-
+        emf = Persistence.createEntityManagerFactory("mybooks");
+        em = emf.createEntityManager();
 
         try {
 
-            emf = Persistence.createEntityManagerFactory("mybooks");
-            em = emf.createEntityManager();
+          em.getTransaction().begin();
 
             try {
 
-                addBook("booktest2", 56489.65);
+                //addOneBook("my test book", 56489.65);
+
+                Book [] books = new Book [2];
+                books[0] = new Book("Book1", 65689.3);
+                books[1] = new Book("Book2", 8795.98);
+
+                Author author = new Author("Name1", "SecondName1", "some text");
+
+                for (Book b : books){
+                    author.addBook(b);
+                }
+
+                em.persist(author);
+                em.getTransaction().commit();
+
 
             } finally {
                 em.close();
@@ -29,7 +43,7 @@ public class Main {
         }
     }
 
-    private static void addBook(String name, double price) {
+    private static void addOneBook(String name, double price) {
 
         em.getTransaction().begin();
 
@@ -42,6 +56,6 @@ public class Main {
         } catch (Exception ex) {
             em.getTransaction().rollback();
         }
-
     }
+
 }
