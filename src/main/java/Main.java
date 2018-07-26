@@ -1,14 +1,52 @@
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import xml.JAXBReader;
 
 public class Main {
 
-    static EntityManagerFactory emf;
-    static EntityManager em;
+    //static EntityManagerFactory emf;
+    //static EntityManager em;
+
+
 
     public static void main(String[] args) {
-        emf = Persistence.createEntityManagerFactory("mybooks");
+
+
+        JAXBReader.getmain("/home/roman/IdeaProjects/mybooks/src/main/resources/new_books.xml");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*emf = Persistence.createEntityManagerFactory("mybooks");
         em = emf.createEntityManager();
 
         try {
@@ -40,10 +78,10 @@ public class Main {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
-    private static void addOneBook(String name, double price) {
+    /*private static void addOneBook(String name, double price) {
 
         em.getTransaction().begin();
 
@@ -56,6 +94,6 @@ public class Main {
         } catch (Exception ex) {
             em.getTransaction().rollback();
         }
-    }
+    }*/
 
 }

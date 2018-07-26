@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<catalog>
+    <book>
+        <name>Book form xml 1</name>
+        <originalName>book from xml 1</originalName>
+        <series>new books</series>
+        <translator>I'm</translator>
+        <year>1984</year>
+        <isImg></isImg>
+        <pages>450</pages>
+        <price>456.59</price>
+    </book>
+    <book>
+        <name>Book form xml 1</name>
+        <originalName>book from xml 1</originalName>
+        <series>new books</series>
+        <translator>I'm</translator>
+        <year>1984</year>
+        <isImg></isImg>
+        <pages>450</pages>
+        <price>456.59</price>
+    </book>
+</catalog>
