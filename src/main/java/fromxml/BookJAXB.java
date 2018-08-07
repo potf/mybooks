@@ -1,7 +1,8 @@
-package xml;
+package fromxml;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.awt.print.Book;
 
 @XmlRootElement(name = "book")
 public class BookJAXB {
@@ -60,7 +61,7 @@ public class BookJAXB {
 
     @Override
     public String toString() {
-        return "xml.BookJAXB{" +
+        return "fromxml.BookJAXB{" +
                 ", name='" + name + '\'' +
                 ", originalName='" + originalName + '\'' +
                 ", series='" + series + '\'' +

@@ -1,3 +1,5 @@
+package com.mybook;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,4 +55,12 @@ public class Book {
             ganre.books.add(this);
     }
 
+    @Override
+    public String toString() {
+        return "com.mybook.Book{" +
+                "name='" + name + '\'' +
+                ", pages=" + pages +
+                ", price=" + price +
+                '}';
+    }
 }

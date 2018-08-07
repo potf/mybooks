@@ -1,4 +1,4 @@
-package xml;
+package fromxml;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,11 +10,6 @@ public class CatalogJAXB {
 
     @XmlElement(name = "book")
     List<BookJAXB> list = new ArrayList<BookJAXB>();
-
-    public void add(BookJAXB bookJAXB) {
-        list.add(bookJAXB);
-    }
-
 
     public void print() {
         for (BookJAXB b : list) {

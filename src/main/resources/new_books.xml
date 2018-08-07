@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <catalog>
     <book>
-        <name>Book form xml 1</name>
+        <name>com.mybook.Book form xml 1</name>
         <originalName>book from xml 1</originalName>
         <series>new books</series>
         <translator>I'm</translator>
@@ -9,15 +9,27 @@
         <isImg></isImg>
         <pages>450</pages>
         <price>456.59</price>
+        <author>author1</author>
     </book>
     <book>
-        <name>Book form xml 1</name>
-        <originalName>book from xml 1</originalName>
+        <name>com.mybook.Book form xml 2</name>
+        <originalName>book from xml 2</originalName>
         <series>new books</series>
         <translator>I'm</translator>
         <year>1984</year>
         <isImg></isImg>
         <pages>450</pages>
-        <price>456.59</price>
+        <price>45659</price>
     </book>
+    <book>
+        <name>com.mybook.Book form xml 3</name>
+        <originalName>book from xml 3</originalName>
+        <series>new books</series>
+        <translator>I'm</translator>
+        <year>1984</year>
+        <isImg></isImg>
+        <pages>450</pages>
+        <price>459</price>
+    </book>
+
 </catalog>
