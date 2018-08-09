@@ -57,9 +57,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "com.mybook.Book{" +
+        return "Book{" +
                 "name='" + name + '\'' +
-                ", pages=" + pages +
                 ", price=" + price +
                 '}';
     }

@@ -19,6 +19,14 @@ public class BookJAXB {
     public BookJAXB() {
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     @XmlElement
     public void setName(String name) {
         this.name = name;

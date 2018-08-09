@@ -18,6 +18,8 @@ public class JAXBReader {
 
             CatalogJAXB catalogJAXB = (CatalogJAXB) unmarshaller.unmarshal(new File(filePath));
 
+
+
             catalogJAXB.print();
 
         } catch (JAXBException e) {
@@ -26,8 +28,8 @@ public class JAXBReader {
     }
 
     public static List bookList(String filePath){
+        List<Book> bookList = new ArrayList<Book>();
 
-        List<Book> bookList = new ArrayList();
 
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(CatalogJAXB.class);
@@ -35,9 +37,8 @@ public class JAXBReader {
 
             CatalogJAXB catalogJAXB = (CatalogJAXB) unmarshaller.unmarshal(new File(filePath));
 
-            for (BookJAXB b : catalogJAXB.list){
-                bookList.add(b);
-            }
+            bookList = catalogJAXB.BookList();
+
 
         } catch (JAXBException e) {
             e.printStackTrace();
