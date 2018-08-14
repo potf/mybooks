@@ -13,14 +13,12 @@ public class Author {
     private int id;
     private String name;
     private String secondName;
-    private String description;
 
     public Author() {}
 
-    public Author(String name, String secondName, String description) {
+    public Author(String name, String secondName) {
         this.name = name;
         this.secondName = secondName;
-        this.description = description;
     }
 
     @ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL)

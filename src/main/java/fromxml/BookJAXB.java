@@ -15,6 +15,7 @@ public class BookJAXB {
     private int pages;
     private String isImg;
     private double price;
+    private String description;
 
     public BookJAXB() {
     }
@@ -25,6 +26,34 @@ public class BookJAXB {
 
     public double getPrice() {
         return price;
+    }
+
+    public String getOriginalName() {
+        return originalName;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getTranslator() {
+        return translator;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public String getIsImg() {
+        return isImg;
+    }
+
+    public String getDescription(){
+        return description;
     }
 
     @XmlElement
@@ -65,6 +94,11 @@ public class BookJAXB {
     @XmlElement
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @XmlElement
+    public void setDescription(String description){
+        this.description = description;
     }
 
     @Override

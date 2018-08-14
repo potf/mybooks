@@ -14,6 +14,9 @@ public class Ganre {
     @Column(nullable = false)
     private String name;
 
+    public Ganre() {
+    }
+
     public void Ganre(){}
 
     public Ganre(String name) {

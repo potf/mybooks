@@ -1,5 +1,6 @@
 package fromxml;
 
+import com.mybook.Author;
 import com.mybook.Book;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -19,15 +20,16 @@ public class CatalogJAXB {
         List<Book> bookList = new ArrayList<Book>();
 
         for (BookJAXB bookJAXB : list){
-            bookList.add(new Book(bookJAXB.getName(), bookJAXB.getPrice()));
+            bookList.add(new Book(bookJAXB.getName(), bookJAXB.getOriginalName(), bookJAXB.getSeries(), bookJAXB.getYear(), bookJAXB.getTranslator(), bookJAXB.getPages(), bookJAXB.getIsImg(), bookJAXB.getPrice(), bookJAXB.getDescription()));
         }
 
         return bookList;
     }
 
-    public void print() {
-        for (BookJAXB b : list) {
-            System.out.println(b.toString());
-        }
+    public List AuthorList(){
+        List<Author> authorList = new ArrayList<Author>();
+
+
     }
+
 }

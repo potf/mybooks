@@ -19,13 +19,21 @@ public class Book {
     private int pages;
     private String isImg;
     private double price;
+    private String description;
 
     public Book() {
     }
 
-    public Book(String name, double price) {
+    public Book(String name, String originalName, String series, int year, String translator, int pages, String isImg, double price, String description) {
         this.name = name;
+        this.originalName = originalName;
+        this.series = series;
+        this.year = year;
+        this.translator = translator;
+        this.pages = pages;
+        this.isImg = isImg;
         this.price = price;
+        this.description = description;
     }
 
     @ManyToMany
@@ -55,10 +63,18 @@ public class Book {
             ganre.books.add(this);
     }
 
+
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", originalName='" + originalName + '\'' +
+                ", series='" + series + '\'' +
+                ", year=" + year +
+                ", translator='" + translator + '\'' +
+                ", pages=" + pages +
+                ", isImg='" + isImg + '\'' +
                 ", price=" + price +
                 '}';
     }

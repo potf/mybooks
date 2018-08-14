@@ -1,11 +1,10 @@
 package com.mybook;
 
-import fromxml.JAXBReader;
+import fromxml.ReaderJAXB;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -16,8 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //JAXBReader.getmain("/home/roman/IdeaProjects/mybooks/src/main/resources/new_books.xml");
-        List<Book> l = JAXBReader.bookList("/home/roman/IdeaProjects/mybooks/src/main/resources/new_books.xml");
+        List<Book> l = ReaderJAXB.bookList("/home/roman/IdeaProjects/mybooks/src/main/resources/new_books.xml");
 
         emf = Persistence.createEntityManagerFactory("mybooks");
         em = emf.createEntityManager();
@@ -47,20 +45,4 @@ public class Main {
             e.printStackTrace();
         }
     }
-
-    private static void addOneBook(String name, double price) {
-
-        em.getTransaction().begin();
-
-        try {
-            Book book = new Book(name, price);
-
-            em.persist(book);
-            em.getTransaction().commit();
-
-        } catch (Exception ex) {
-            em.getTransaction().rollback();
-        }
-    }
-
 }
